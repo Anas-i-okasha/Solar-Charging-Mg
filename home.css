@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+}
+.parent{
+    display: grid;
+    grid-template-columns: repeat(7,150px);
+    justify-content: center;
+}
+.child{
+    border: orange 10px solid;
+    height: 150px;
+    background-color: blue;
+}
+
+@media all and (max-width:800px){
+    .parent{
+        grid-template-columns: repeat(3,200px);
+        gap: 10px;
+        /* transform: skewx(20deg); */
+        /* transition: all 2s linear; */
+    }
+    .child{
+        height: 50px;
+        background-color: brown;
+    }
+}
+@media (max-width:500px){
+    .parent{
+        grid-template-columns: repeat(2,300px);
+        grid-template-rows: repeat(2,200px);
+
+    }
+    .child{
+        height: 30px;
+        background-color: blanchedalmond;
+    }
+}
+
+@media (orientation:landscape){
+    .child{
+    background-color: chartreuse;
+    }
+}
