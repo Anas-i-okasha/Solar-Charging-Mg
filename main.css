@@ -1,49 +1,70 @@
-.nav-center{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    background-color: rgb(159, 243, 126);
+*{
+    box-sizing: border-box;
 }
-.nav-header{
-    margin-left: 3rem;
-    color: blueviolet;
-    font-weight: bold;
-    font-size: large;
-}
-.nav-list{
-    display:inline-grid;
-    list-style: none;
-    font-family: sans-serif; 
-    font-weight: bold;
-    border: 1px solid wheat;
-    border-radius: 3px;
-    grid-template-columns: repeat(4 ,auto);
-    grid-gap: 1.2rem;
-}
-
-@media all and (max-width:600px){
-    .nav-list{
-         grid-template-columns: repeat(1,auto);
-        grid-template-rows: repeat(4,auto); 
-        background-color: rgb(81, 211, 243); 
-    }
-}
-.list:hover{
-    color: rgb(207, 19, 50);
-}
-.btn{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    justify-content: end;
-    gap: 20px;
+.container{
+    width: 90vw;
+    margin-top: 0;
+    margin-left: auto;
     margin-right: auto;
 }
-a {
-    color: black;
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vh 2vw;
+    background-color: #272829;
+    color: white;
+    position: fixed;
+    width: 90vw;
+    top: 0;
 }
- a:link{
-text-decoration: none;
-color: black;
+.nav-header{
+    flex-grow:1;
 }
-
-
-
+.nav-links{
+    display: flex;
+    gap: 0.8em;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    /* border-radius: 0.5em; */
+    background-color: rgb(166, 168, 32);
+}
+/* Hero section  */
+.hero{
+    height: 90vh;
+    width: 100%;
+    background-image: url('./img/images.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-info{
+    color: rgb(131, 233, 153);
+    position: relative;
+    top: 30%;
+    padding-left: 2vh;
+}
+.hero-info button{
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: yellow;
+    width: 6em;
+    border-radius: 4px;
+    animation-name: apply;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: 3;
+}
+@keyframes apply {
+    from {
+        transform: scale(1);
+    }
+    to {
+        rotate: 45;
+        transform: scale(1.1);
+    }
+}
