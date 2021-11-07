@@ -31,7 +31,6 @@
     color: white;
 }
 a:hover{
-    /* border-radius: 0.5em; */
     background-color: rgb(166, 168, 32);
 }
 /* Hero section  */
@@ -67,4 +66,34 @@ a:hover{
         rotate: 45;
         transform: scale(1.1);
     }
+}
+.pv-main{
+    background-color:#1b334b;
+    color: white;
+    text-align: center;
+}
+.pv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.card{
+    /* margin-top: 0; */
+    box-shadow: 0 4px 8px rgb(0, 0, 1.2);
+    padding: 15px;
+    border-radius: 4px;
+    border-top: #01627f solid 3px;
+    margin: 0.5em;
+}
+.card:hover{
+    color: white;
+    background-color: #272829;
+    transition: all 0.5s linear ;
+}
+.card h2{
+    text-align: center;
+}
+.desgin-pv{
+    color: white;
+    background-color: #1b334b;
+    text-align: center;
 }
